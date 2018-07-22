@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/publicKeyA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/privateKeyA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/publicKeyA" />
+
+            <TextView
+                android:id="@+id/publicKeyB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/privateKeyA" />
+
+            <TextView
+                android:id="@+id/privateKeyB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/publicKeyB" />
+
+            <TextView
+                android:id="@+id/sharedSecretA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/privateKeyB" />
+
+            <TextView
+                android:id="@+id/sharedSecretB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sharedSecretA" />
+
+            <TextView
+                android:id="@+id/plainData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sharedSecretB" />
+
+            <TextView
+                android:id="@+id/encryptedData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plainData" />
+
+            <TextView
+                android:id="@+id/decryptedData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/encryptedData" />
+
+            <TextView
+                android:id="@+id/kpGenDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/decryptedData" />
+
+            <TextView
+                android:id="@+id/sharedSecretGenDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kpGenDuration" />
+
+            <TextView
+                android:id="@+id/dataEncDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sharedSecretGenDuration" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
