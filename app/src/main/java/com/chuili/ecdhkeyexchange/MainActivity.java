@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             KeyAgreement aKA2 = KeyAgreement.getInstance("ECDH", "SC");
             aKA2.init(kpB.getPrivate());
             aKA2.doPhase(kpB.getPublic(), true);
-            SecretKey sharedKeyB = aKA.generateSecret("AES");
+            SecretKey sharedKeyB = aKA2.generateSecret("AES");
 //            Log.d(TAG, "-----------[Shared key B generation - end]-----------");
             Log.d(TAG, "-----------[Shared key generation - end]-----------");
             Log.d(TAG, "sharedKeyA: " + DataHelper.byteArrayToHexaStr(sharedKeyA.getEncoded()));
